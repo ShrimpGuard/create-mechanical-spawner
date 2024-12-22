@@ -305,7 +305,7 @@ public class SpawnerBlockEntity extends KineticBlockEntity  implements DynamicCy
 
         /*if(!checkLootCollector())
             return false;*/
-        if (fluidTank.getFluidAmount() < getRecipe().get().getFluidAmount())
+        if (fluidTank.getFluidAmount() < getRecipe().get().getFluidAmount() || fluidTank.getFluidAmount() == 0)
             return false;
         if(!isSpawnableBlockPos())
             return false;
